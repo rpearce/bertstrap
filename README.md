@@ -80,4 +80,4 @@ And then you have access to all the mixins from that file! Yay!
     Navigate to http://localhost:4567
 
 ## Compile SCSS files to CSS folder:
-    $ sass --watch public/stylesheets/scss/:public/stylesheets/css
+    $ sass --watch ./public/stylesheets/scss/:./public/stylesheets/css
