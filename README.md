@@ -74,7 +74,6 @@ And then you have access to all the mixins from that file! Yay!
 ## Getting started with the example
     (Required: RubyGems, Git, Ruby >= v1.9.2)
     $ git clone git@github.com:rpearce/bertstrap.git
-    $ cd example
     $ gem install bundler
     $ bundle
     $ ruby app.rb
