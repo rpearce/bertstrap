@@ -1,0 +1,86 @@
+.first-box {
+  background-color: #cccccc;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 150px; }
+
+.second-box {
+  background-color: #cccccc;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 150px; }
+
+.third-box {
+  background-color: #cccccc;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 150px; }
+
+.fourth-box {
+  background-color: #cccccc;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 150px; }
+
+.fifth-box {
+  background-color: #cccccc;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 150px; }
+
+.sixth-box {
+  background-color: #cccccc;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 150px; }
+
+.first-box {
+  -webkit-border-radius: 100px !important;
+  -moz-border-radius: 100px !important;
+  -ms-border-radius: 100px !important;
+  -o-border-radius: 100px !important;
+  border-radius: 100px !important; }
+
+.second-box {
+  -webkit-box-shadow: 10px 10px 5px #888888;
+  -moz-box-shadow: 10px 10px 5px #888888;
+  box-shadow: 10px 10px 5px #888888; }
+
+.third-box {
+  -khtml-opacity: 0.4;
+  -moz-opacity: 0.4;
+  opacity: 0.4;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(40)); }
+
+.fourth-box {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.fifth-box {
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out; }
+  .fifth-box:hover {
+    background-color: #55989b; }
+
+.sixth-box {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s; }
+
+.center {
+  text-align: center; }
+
+.title {
+  margin-bottom: 17px;
+  border-bottom: 1px solid #404040; }

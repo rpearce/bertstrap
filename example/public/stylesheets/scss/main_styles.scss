@@ -1,0 +1,50 @@
+@import 'core_mixins';
+@import 'core_variables';
+
+// Gettin' fancy
+$boxes: first, second, third, fourth, fifth, sixth;
+
+@each $box in $boxes {
+  .#{$box}-box {
+    background-color: $gray;
+    padding-top     : 50px;
+    padding-bottom  : 50px;
+    margin-bottom   : 150px;
+  }
+}
+// End Gettin' fancy
+
+.first-box {
+  @include border-radius(100px);
+}
+
+.second-box {
+  @include box-shadow(10px 10px 5px #888);
+}
+
+.third-box {
+  @include opacity(0.4);
+}
+
+.fourth-box {
+  @include transform(rotate(-45deg));
+}
+
+.fifth-box {
+  @include transition(background-color 0.3s ease-in-out);
+  &:hover { background-color: $seabreeze; }
+}
+
+.sixth-box {
+  @include transform(translate3d(0,0,0));
+  @include delay(0.2)
+}
+
+// Misc
+.center { text-align: center; }
+.title {
+  margin-bottom: 17px;
+  border-bottom: 1px solid #404040;
+  // @include box-shadow(0 1px 0 rgba(255,255,255,0.3));
+}
+

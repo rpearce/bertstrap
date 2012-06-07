@@ -1,0 +1,59 @@
+!!!
+%html
+  /[if lt IE 7 ]         %html{class: "ie ie6", lang: "en"}
+  /[if IE 7 ]            %html{class: "ie ie7", lang: "en"}
+  /[if IE 8 ]            %html{class: "ie ie8", lang: "en"}
+  /[if (gte IE 9)|!(IE)] %html{lang: "en"}
+  %head
+    / Basic Page Needs
+    / ==================================================
+    %title bertstrap
+    %meta{name: 'description', content: ''}
+    %meta{name: 'author', content: ''}
+    %meta{name: 'keywords', content: ''}
+
+    / Mobile Specific Metas
+    / ==================================================
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1'}
+
+    / CSS
+    / ==================================================
+    %link{rel: 'stylesheet', type: 'text/css', href: '../stylesheets/css/main_styles.css'}
+    %link{rel: 'stylesheet', type: 'text/css', href: '../stylesheets/lib/skeleton.css'}
+    %link{rel: 'stylesheet', type: 'text/css', href: '../stylesheets/lib/base.css'}
+
+    / Favicons
+    / ==================================================
+    / %link{rel: "shortcut icon", href: "images/favicon.ico"}
+    / %link{rel: "apple-touch-icon", href: "images/apple-touch-icon.png"}
+    / %link{rel: "apple-touch-icon", sizes: "72x72", href: "images/apple-touch-icon-72x72.png"}
+    / %link{rel: "apple-touch-icon", sizes: "114x114", href: "images/apple-touch-icon-114x114.png"}
+
+  %body
+    %a{:href => "https://github.com/rpearce/bertstrap"}
+      %img{:alt => "Fork me on GitHub", :src => "https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png", :style => "position: absolute; top: 0; right: 0; border: 0;"}
+    .container.center
+      %header.title
+        %h1
+          Bertstrap Example. <3
+        %a.twitter-follow-button{"data-show-count" => "false", "data-size" => "large", :href => "https://twitter.com/RobertWPearce"}
+          Follow @RobertWPearce
+        %br
+        %a{href: 'https://www.github.com/rpearce', style: 'text-decoration:none'}
+          %img{src: '../images/github-logo.png'}
+
+      %section.row-one
+        .first-box.one-third.column Border Radius
+        .second-box.one-third.column Box Shadow
+        .third-box.one-third.column Opacity
+      .clear
+      %section.row-two
+        .fourth-box.one-third.column Transform
+      .clear
+      %section.row-three
+        .fifth-box.eight.columns Transition
+        .sixth-box.eight.columns Delay (coming soon)
+      .clear
+
+      :javascript
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
