@@ -81,6 +81,12 @@
 .center {
   text-align: center; }
 
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
 .title {
   margin-bottom: 17px;
-  border-bottom: 1px solid #404040; }
+  border-bottom: 1px solid #a6a6a6; }

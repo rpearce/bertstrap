@@ -18,9 +18,9 @@
 
     / CSS
     / ==================================================
-    %link{rel: 'stylesheet', type: 'text/css', href: '../example/stylesheets/css/main_styles.css'}
-    %link{rel: 'stylesheet', type: 'text/css', href: '../example/stylesheets/lib/skeleton.css'}
-    %link{rel: 'stylesheet', type: 'text/css', href: '../example/stylesheets/lib/base.css'}
+    %link{rel: 'stylesheet', type: 'text/css', href: '../stylesheets/css/main_styles.css'}
+    %link{rel: 'stylesheet', type: 'text/css', href: '../stylesheets/lib/skeleton.css'}
+    %link{rel: 'stylesheet', type: 'text/css', href: '../stylesheets/lib/base.css'}
 
     / Favicons
     / ==================================================
@@ -31,29 +31,30 @@
 
   %body
     %a{:href => "https://github.com/rpearce/bertstrap"}
-      %img{:alt => "Fork me on GitHub", :src => "https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png", :style => "position: absolute; top: 0; right: 0; border: 0;"}
-    .container.center
-      %header.title
+      %img{:alt => "Fork me on GitHub", :src => "https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png", :style => "position: absolute; top: 0; left: 0; border: 0;"}
+    .container
+      %header.title{style: 'margin-top:5px;'}
+        %img.left{src: '../images/burt-reynolds.jpg', style: 'width:50px;height:50px;'}
         %h1
-          Bertstrap Example. <3
+          Bertstrap
         %a.twitter-follow-button{"data-show-count" => "false", "data-size" => "large", :href => "https://twitter.com/RobertWPearce"}
           Follow @RobertWPearce
-        %br
         %a{href: 'https://www.github.com/rpearce', style: 'text-decoration:none'}
-          %img{src: '../example/images/github-logo.png'}
-
-      %section.row-one
-        .first-box.one-third.column Border Radius
-        .second-box.one-third.column Box Shadow
-        .third-box.one-third.column Opacity
+          %img{src: '../images/github-logo.png'}
       .clear
-      %section.row-two
-        .fourth-box.one-third.column Transform
-      .clear
-      %section.row-three
-        .fifth-box.eight.columns Transition
-        .sixth-box.eight.columns Delay (coming soon)
-      .clear
+      .center
+        %section.row-one
+          .first-box.one-third.column Border Radius
+          .second-box.one-third.column Box Shadow
+          .third-box.one-third.column Opacity
+        .clear
+        %section.row-two
+          .fourth-box.one-third.column Transform
+        .clear
+        %section.row-three
+          .fifth-box.eight.columns Transition
+          .sixth-box.eight.columns Delay (coming soon)
+        .clear
 
       :javascript
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
