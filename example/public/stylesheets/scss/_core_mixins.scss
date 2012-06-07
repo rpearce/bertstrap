@@ -27,17 +27,17 @@
 }
 @mixin transition($arg) {
   -webkit-transition: $arg;
-  -moz-transition: $arg;
-  -o-transition: $arg;
-  transition: $arg;
+  -moz-transition   : $arg;
+  -o-transition     : $arg;
+  transition        : $arg;
 }
 
 // Shorthand for transition delay time amount in seconds
 @mixin delay($count) {
   -webkit-transition-delay: #{$count}s;
-  -moz-transition-delay: #{$count}s;
-  -o-transition-delay: #{$count}s;
-  transition-delay: #{$count}s;
+  -moz-transition-delay   : #{$count}s;
+  -o-transition-delay     : #{$count}s;
+  transition-delay        : #{$count}s;
 }
 
 // @mixin align($location) { text-align: $location; } ----- Not really all that useful, but here for reference. -rwp

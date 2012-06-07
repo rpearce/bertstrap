@@ -47,15 +47,15 @@ And then you have access to all the mixins from that file! Yay!
   }
   @mixin transition($arg) {
     -webkit-transition: $arg;
-    -moz-transition: $arg;
-    -o-transition: $arg;
-    transition: $arg;
+    -moz-transition   : $arg;
+    -o-transition     : $arg;
+    transition        : $arg;
   }
   @mixin delay($count) {
     -webkit-transition-delay: #{$count}s;
-    -moz-transition-delay: #{$count}s;
-    -o-transition-delay: #{$count}s;
-    transition-delay: #{$count}s;
+    -moz-transition-delay   : #{$count}s;
+    -o-transition-delay     : #{$count}s;
+    transition-delay        : #{$count}s;
   }
 ```
 
