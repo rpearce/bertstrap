@@ -1,3 +1,7 @@
+// Lists
+// ----------------------------------------------------------->
+$box-shadow-prefixes: -webkit-box-shadow, -moz-box-shadow, box-shadow;
+
 // Mixins
 // ----------------------------------------------------------->
 @mixin border-radius($amount) {
@@ -7,10 +11,11 @@
   -o-border-radius     : $amount !important;
   border-radius        : $amount !important;
 }
-@mixin box-shadow($arg) {
-  -webkit-box-shadow: $arg;
-  -moz-box-shadow   : $arg;
-  box-shadow        : $arg;
+@mixin box-shadow($arg, $arg2: null, $arg3: null) {
+  $arguments: $arg, $arg2, $arg3;
+  @each $property in $box-shadow-prefixes {
+    #{$property}: $arguments;
+  }
 }
 @mixin opacity($amount) {
   -khtml-opacity: $amount;
