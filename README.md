@@ -20,50 +20,59 @@ And then you have access to all the mixins from that file! Yay!
 
 ## The Mixins
 ```scss
-  @mixin border-radius($amount) {
-    -webkit-border-radius: $amount !important;
-    -moz-border-radius   : $amount !important;
-    -ms-border-radius    : $amount !important;
-    -o-border-radius     : $amount !important;
-    border-radius        : $amount !important;
+$box-shadow-prefixes: -webkit-box-shadow, -moz-box-shadow, box-shadow; // a list required for mixin #2
+
+@mixin border-radius($amount) {
+  -webkit-border-radius: $amount;
+     -moz-border-radius: $amount;
+      -ms-border-radius: $amount;
+       -o-border-radius: $amount;
+          border-radius: $amount;
+}
+
+@mixin box-shadow($arg, $arg2: null, $arg3: null) {
+  $arguments: $arg, $arg2, $arg3;
+  @each $property in $box-shadow-prefixes {
+    #{$property}: $arguments;
   }
-  @mixin box-shadow($arg) {
-    -webkit-box-shadow: $arg;
-    -moz-box-shadow   : $arg;
-    box-shadow        : $arg;
-  }
-  @mixin opacity($amount) {
-    -khtml-opacity: $amount;
-    -moz-opacity  : $amount;
-    opacity       : $amount;
-    filter        : progid:DXImageTransform.Microsoft.Alpha(opacity=(#{$amount * 100}));
-  }
-  @mixin transform($args) {
-    -webkit-transform: $args;
-    -moz-transform   : $args;
-    -ms-transform    : $args;
-    -o-transform     : $args;
-    transform        : $args;
-  }
-  @mixin transition($arg) {
-    -webkit-transition: $arg;
-    -moz-transition   : $arg;
-    -o-transition     : $arg;
-    transition        : $arg;
-  }
-  @mixin delay($count) {
-    -webkit-transition-delay: #{$count}s;
-    -moz-transition-delay   : #{$count}s;
-    -o-transition-delay     : #{$count}s;
-    transition-delay        : #{$count}s;
-  }
+}
+
+@mixin opacity($amount) {
+  -khtml-opacity: $amount;
+    -moz-opacity: $amount;
+         opacity: $amount;
+          filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(#{$amount * 100}));
+}
+
+@mixin transform($args) {
+  -webkit-transform: $args;
+     -moz-transform: $args;
+      -ms-transform: $args;
+       -o-transform: $args;
+          transform: $args;
+}
+
+@mixin transition($arg) {
+  -webkit-transition: $arg;
+     -moz-transition: $arg;
+       -o-transition: $arg;
+          transition: $arg;
+}
+
+// Shorthand for transition delay time amount in seconds
+@mixin delay($count) {
+  -webkit-transition-delay: #{$count}s;
+     -moz-transition-delay: #{$count}s;
+       -o-transition-delay: #{$count}s;
+          transition-delay: #{$count}s;
+}
 ```
 
 ## The Variables (an ever-growing list)
 ```scss
-  $white                 : #FFFFFF;
+  $white                 : #FFF;
   $whitesmoke            : #F5F5F5;
-  $gray                  : #CCCCCC;
+  $gray                  : #CCC;
   $ive-got-a-crush-on-you: #FEE4B8;
   $blue-mimozaa          : #28FFCD;
   $seabreeze             : #55989B;

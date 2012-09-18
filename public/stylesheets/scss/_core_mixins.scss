@@ -5,44 +5,48 @@ $box-shadow-prefixes: -webkit-box-shadow, -moz-box-shadow, box-shadow;
 // Mixins
 // ----------------------------------------------------------->
 @mixin border-radius($amount) {
-  -webkit-border-radius: $amount !important;
-  -moz-border-radius   : $amount !important;
-  -ms-border-radius    : $amount !important;
-  -o-border-radius     : $amount !important;
-  border-radius        : $amount !important;
+  -webkit-border-radius: $amount;
+     -moz-border-radius: $amount;
+      -ms-border-radius: $amount;
+       -o-border-radius: $amount;
+          border-radius: $amount;
 }
+
 @mixin box-shadow($arg, $arg2: null, $arg3: null) {
   $arguments: $arg, $arg2, $arg3;
   @each $property in $box-shadow-prefixes {
     #{$property}: $arguments;
   }
 }
+
 @mixin opacity($amount) {
   -khtml-opacity: $amount;
-  -moz-opacity  : $amount;
-  opacity       : $amount;
-  filter        : progid:DXImageTransform.Microsoft.Alpha(opacity=(#{$amount * 100}));
+    -moz-opacity: $amount;
+         opacity: $amount;
+          filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(#{$amount * 100}));
 }
+
 @mixin transform($args) {
   -webkit-transform: $args;
-  -moz-transform   : $args;
-  -ms-transform    : $args;
-  -o-transform     : $args;
-  transform        : $args;
+     -moz-transform: $args;
+      -ms-transform: $args;
+       -o-transform: $args;
+          transform: $args;
 }
+
 @mixin transition($arg) {
   -webkit-transition: $arg;
-  -moz-transition   : $arg;
-  -o-transition     : $arg;
-  transition        : $arg;
+     -moz-transition: $arg;
+       -o-transition: $arg;
+          transition: $arg;
 }
 
 // Shorthand for transition delay time amount in seconds
 @mixin delay($count) {
   -webkit-transition-delay: #{$count}s;
-  -moz-transition-delay   : #{$count}s;
-  -o-transition-delay     : #{$count}s;
-  transition-delay        : #{$count}s;
+     -moz-transition-delay: #{$count}s;
+       -o-transition-delay: #{$count}s;
+          transition-delay: #{$count}s;
 }
 
 // @mixin align($location) { text-align: $location; } ----- Not really all that useful, but here for reference. -rwp
