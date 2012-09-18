@@ -88,5 +88,5 @@ $box-shadow-prefixes: -webkit-box-shadow, -moz-box-shadow, box-shadow; // a list
     $ ruby app.rb
     Navigate to http://localhost:4567
 
-## Compile SCSS files to CSS folder:
-    $ sass --watch ./public/stylesheets/scss/:./public/stylesheets/css
+## Compile SCSS files to CSS folder in compressed form:
+    $ sass --watch ./public/stylesheets/scss/:./public/stylesheets/css --style compressed
