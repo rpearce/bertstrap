@@ -2,70 +2,88 @@
   background-color: #cccccc;
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-bottom: 150px; }
+  margin-bottom: 150px;
+}
 
 .second-box {
   background-color: #cccccc;
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-bottom: 150px; }
+  margin-bottom: 150px;
+}
 
 .third-box {
   background-color: #cccccc;
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-bottom: 150px; }
+  margin-bottom: 150px;
+}
 
 .fourth-box {
   background-color: #cccccc;
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-bottom: 150px; }
+  margin-bottom: 150px;
+}
 
 .fifth-box {
   background-color: #cccccc;
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-bottom: 150px; }
+  margin-bottom: 150px;
+}
 
 .sixth-box {
   background-color: #cccccc;
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-bottom: 150px; }
+  margin-bottom: 150px;
+}
 
 .first-box {
-  -webkit-border-radius: 100px !important;
-  -moz-border-radius: 100px !important;
-  -ms-border-radius: 100px !important;
-  -o-border-radius: 100px !important;
-  border-radius: 100px !important; }
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+}
 
 .second-box {
   -webkit-box-shadow: 10px 10px 5px #888888;
   -moz-box-shadow: 10px 10px 5px #888888;
-  box-shadow: 10px 10px 5px #888888; }
+  box-shadow: 10px 10px 5px #888888;
+}
 
 .third-box {
   -khtml-opacity: 0.4;
+  /* Safari 1.x */
   -moz-opacity: 0.4;
+  /* Netscape */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  /* IE8 */
   opacity: 0.4;
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(40)); }
+  /* Good Browsers */
+  filter: alpha(opacity=40);
+  /* IE 5-7 */
+}
 
 .fourth-box {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
+  transform: rotate(-45deg);
+}
 
 .fifth-box {
   -webkit-transition: background-color 0.3s ease-in-out;
   -moz-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out; }
-  .fifth-box:hover {
-    background-color: #55989b; }
+  transition: background-color 0.3s ease-in-out;
+}
+.fifth-box:hover {
+  background-color: #55989b;
+}
 
 .sixth-box {
   -webkit-transform: translate3d(0, 0, 0);
@@ -76,17 +94,22 @@
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   -o-transition-delay: 0.2s;
-  transition-delay: 0.2s; }
+  transition-delay: 0.2s;
+}
 
 .center {
-  text-align: center; }
+  text-align: center;
+}
 
 .left {
-  float: left; }
+  float: left;
+}
 
 .right {
-  float: right; }
+  float: right;
+}
 
 .title {
   margin-bottom: 17px;
-  border-bottom: 1px solid #a6a6a6; }
+  border-bottom: 1px solid #a6a6a6;
+}

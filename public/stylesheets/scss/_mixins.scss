@@ -20,12 +20,12 @@ $box-shadow-prefixes: -webkit-box-shadow, -moz-box-shadow, box-shadow;
 }
 
 @mixin opacity($amount) {
-  -khtml-opacity: $amount;
-    -moz-opacity: $amount;
-         opacity: $amount;
-          filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(#{$amount * 100}));
+  -khtml-opacity: $amount; /* Safari 1.x */
+    -moz-opacity: $amount; /* Netscape */
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$amount * 100})"; /* IE8 */
+         opacity: $amount; /* Good Browsers */
+          filter: alpha(opacity=#{$amount * 100}); /* IE 5-7 */
 }
-
 @mixin transform($args) {
   -webkit-transform: $args;
      -moz-transform: $args;
