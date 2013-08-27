@@ -4,6 +4,9 @@ $box-shadow-prefixes: -webkit-box-shadow, -moz-box-shadow, box-shadow;
 
 // Mixins
 // ----------------------------------------------------------->
+@mixin align($location) {
+  text-align: $location;
+}
 @mixin border-radius($amount) {
   -webkit-border-radius: $amount;
      -moz-border-radius: $amount;
@@ -11,14 +14,12 @@ $box-shadow-prefixes: -webkit-box-shadow, -moz-box-shadow, box-shadow;
        -o-border-radius: $amount;
           border-radius: $amount;
 }
-
-@mixin box-shadow($arg, $arg2: null, $arg3: null) {
-  $arguments: $arg, $arg2, $arg3;
+@mixin box-shadow($arg, $arg2: null, $arg3: null, $arg4:null) {
+  $arguments: $arg, $arg2, $arg3, $arg4;
   @each $property in $box-shadow-prefixes {
     #{$property}: $arguments;
   }
 }
-
 @mixin opacity($amount) {
   -khtml-opacity: $amount; /* Safari 1.x */
     -moz-opacity: $amount; /* Netscape */
@@ -33,20 +34,19 @@ $box-shadow-prefixes: -webkit-box-shadow, -moz-box-shadow, box-shadow;
        -o-transform: $args;
           transform: $args;
 }
-
 @mixin transition($arg) {
   -webkit-transition: $arg;
      -moz-transition: $arg;
        -o-transition: $arg;
           transition: $arg;
 }
-
-// Shorthand for transition delay time amount in seconds
 @mixin delay($count) {
   -webkit-transition-delay: #{$count}s;
      -moz-transition-delay: #{$count}s;
        -o-transition-delay: #{$count}s;
           transition-delay: #{$count}s;
 }
-
-// @mixin align($location) { text-align: $location; } ----- Not really all that useful, but here for reference. -rwp
+@mixin dimensions($width, $height) {
+   width: $width;
+  height: $height;
+}

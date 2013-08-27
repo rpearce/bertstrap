@@ -9,11 +9,11 @@ compiled will compile normally, including all the mixin and variable
 values which you included in separate files.
 
 Note        : Partials are denoted by an underscore (_) before the file name.
-Example file: _core_mixins.scss
+Example file: _mixins.scss
 
 In your main file, you simply import the file via:
 ```scss
-  @import '_core_mixins';
+  @import 'mixins';
 ```
 
 And then you have access to all the mixins from that file! Yay!
@@ -21,6 +21,10 @@ And then you have access to all the mixins from that file! Yay!
 ## The Mixins
 ```scss
 $box-shadow-prefixes: -webkit-box-shadow, -moz-box-shadow, box-shadow; // a list required for mixin #2
+
+@mixin align($location) {
+  text-align: $location;
+}
 
 @mixin border-radius($amount) {
   -webkit-border-radius: $amount;
@@ -30,18 +34,19 @@ $box-shadow-prefixes: -webkit-box-shadow, -moz-box-shadow, box-shadow; // a list
           border-radius: $amount;
 }
 
-@mixin box-shadow($arg, $arg2: null, $arg3: null) {
-  $arguments: $arg, $arg2, $arg3;
+@mixin box-shadow($arg, $arg2: null, $arg3: null, $arg4:null) {
+  $arguments: $arg, $arg2, $arg3, $arg4;
   @each $property in $box-shadow-prefixes {
     #{$property}: $arguments;
   }
 }
 
 @mixin opacity($amount) {
-  -khtml-opacity: $amount;
-    -moz-opacity: $amount;
-         opacity: $amount;
-          filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(#{$amount * 100}));
+  -khtml-opacity: $amount; /* Safari 1.x */
+    -moz-opacity: $amount; /* Netscape */
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$amount * 100})"; /* IE8 */
+         opacity: $amount; /* Good Browsers */
+          filter: alpha(opacity=#{$amount * 100}); /* IE 5-7 */
 }
 
 @mixin transform($args) {
@@ -59,12 +64,16 @@ $box-shadow-prefixes: -webkit-box-shadow, -moz-box-shadow, box-shadow; // a list
           transition: $arg;
 }
 
-// Shorthand for transition delay time amount in seconds
 @mixin delay($count) {
   -webkit-transition-delay: #{$count}s;
      -moz-transition-delay: #{$count}s;
        -o-transition-delay: #{$count}s;
           transition-delay: #{$count}s;
+}
+
+@mixin dimensions($width, $height) {
+   width: $width;
+  height: $height;
 }
 ```
 
@@ -73,11 +82,6 @@ $box-shadow-prefixes: -webkit-box-shadow, -moz-box-shadow, box-shadow; // a list
   $white                 : #FFF;
   $whitesmoke            : #F5F5F5;
   $gray                  : #CCC;
-  $ive-got-a-crush-on-you: #FEE4B8;
-  $blue-mimozaa          : #28FFCD;
-  $seabreeze             : #55989B;
-  $limealicious          : #A9FD39;
-  $power-c               : #790D85;
 ```
 
 ## Getting started with the example
